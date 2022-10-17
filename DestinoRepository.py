@@ -18,10 +18,10 @@ class DestinoRepository:
         for local in destino:
             self.dict_destinos[local.ddd] = local.destino
 
-    def checa_se_ddd_existe(self, ddd) -> bool:
+    def checa_se_ddd_existe(self, ddd: int) -> bool:
         return ddd in self.dict_destinos
 
-    def checa_se_cidade_existe(self, cidade) -> bool:
+    def checa_se_cidade_existe(self, cidade: str) -> bool:
         return cidade in self.dict_destinos.values()
 
     def obter_destino_pelo_ddd(self, ddd: int) -> str:
